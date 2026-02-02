@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+     <!-- Container اصلی که کل صفحه رو میگیره -->
+    <div class="main-container">
+    <header class="hero">
+        <!-- اسم بازی سمت راست -->
+        <div class="card game-name">3D Room Raylib</div>     
+
+        <!-- جمله وسط Hero -->
+        <div class="card slogan">for Generative minds</div>
+
+        <!-- دکمه دانلود سمت چپ -->
+        <div class="card download-container">
+            <a href="https://github.com/PouriaMashhadi/Raylib_Project" target="_blank">
+                <button type="button" class="download">DOWNLOAD</button>
+            </a>
+        </div>
+    </header>
+    <nav class="sub-menu">
+            <div class="menu-item"><a href="./index.html">Home</a></div>
+            <div class="menu-item"><a href="./devlog.html">Documentation</a></div>
+            <div class="menu-item"><a href="./gallery.html">gallery</a></div>
+    </nav>
+    <!----------------------------->
+    <!-- Documentation Section -->
+    <section class="documentation">
+        <article>
+            <h1>Logic</h1>
+            <p>for each vertical column of the screen a ray is cast from player's position in to the map THE DIRECTION OF THIS RAY IS CALCULATED 
+                uding the player's viewing direction combined with the camera plain. the ray then advances through the grid cell by cell using DDA until it hits a wall.
+                Once a wall is hit, the perpendicular distance from the player to the wall is computed.
+                This distance is used to determine the height of the vertical line drawn on the screen for that column: closer walls appear taller, while farther walls appear shorter. 
+                Drawing these vertical slices side by side creates the illusion of a 3D scene.</p> 
+            </p>
+        </article>
+
+        <article>
+            <h1>Chalenges</h1>
+            <h3> Fish-eye Effect</h3>
+            <p>"The fisheye effect occurs because rays cast at different angles have varying path lengths to the same wall. 
+                By calculating the perpendicular distance from the camera plane to the wall intersection point
+                 (using conditional logic based on whether the ray hit a vertical or horizontal wall face), 
+                 we obtain a distance measurement that is independent of ray angle, resulting in correct linear perspective projection."
+            </p>
+        </article>
+    </section>
+    <!-- Footer -->
+    <footer>
+        <p>Designed by: PouriaMashhadi</p>
+        <p>404522079</p>
+        <p>© 2026 Open Source License</p>
+    </footer>
+    </div>
+</body>
+</html>
