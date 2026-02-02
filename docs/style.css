@@ -1,0 +1,311 @@
+:root{
+    --color-primary: #1a1a3d;
+    --color_h3: rgba(120, 240, 7, 0.918) ;
+    --color_particle:rgb(255, 255, 255) ;
+    --color-secondary: #2c2c54 ;
+    --font-heading: "Bell MT", "Belleza", Georgia, serif;
+    --font-particle:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    --lineheight:1.5;
+
+
+
+
+}
+
+body {
+    margin: 0;
+    font-family: Tahoma, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.main-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* کل صفحه */
+    background-color:var(--color-primary); 
+}
+/* محتوای اصلی */
+main {
+    flex: 1; /*filling the content between header and footer*/
+}
+.hero, .feature-grid {
+    margin: 0;
+    padding: 0 20px; /* فقط padding داخلی لازم */
+}
+.feature-grid {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+.hero {
+    width: 100%;
+    background-color:var(--color-secondary); /* رنگ نوار */
+    display: flex;
+    padding: 10px;
+    gap: 5px;
+  font-family: var( --font-heading);
+}
+
+/* کارت‌ها */
+.card {
+ background-color: transparent;
+    padding: 15px;
+    flex: 1;
+    display: flex;
+    align-items: center;      /* وسط‌چین عمودی */
+    justify-content: center;  /* وسط‌چین افقی */
+    border-radius: 8px;
+}
+
+/* اسم بازی */
+.game-name {
+    font-size: 50px;
+    font-weight: bold;
+    color: chartreuse;
+}
+
+/* شعار */
+.slogan {
+    font-size: 40px;
+    color: rgb(0, 255, 255);
+    
+}
+
+/* دکمه دانلود */
+.download{
+    text-decoration: none;
+    padding: 15px 20px;
+    background-color: rgb(73, 20, 220);
+    color: chartreuse;
+    border: none;
+    cursor: pointer;/*تغییر شکل ماوس*/
+    border-radius: 30px;
+    font-size: 40px;
+     font-family: var(--font-heading);
+    display: inline-block;
+    transition: background-color 0.3s ease,
+                color 0.3s ease,
+                box-shadow 0.3s ease,
+                transform 0.2s ease;
+}
+button:hover {
+    background-color: aqua;
+    color: red;
+    transform: translateY(-2px);/*بالا اومدن یا پایین رفتن*/
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+.sub-menu {
+    width: 100%;
+    display: flex;
+    justify-content: center; 
+    background-color: #02f89a; 
+    padding: 5px 0;
+    gap: 40px; 
+    box-sizing: border-box;
+    position: relative;
+    font-size: 20px;
+}
+/****************************************/
+/* Footer */
+footer {
+    text-align: center;
+    padding: 15px 0;
+    background-color: var(--color-secondary) ;
+    color: rgb(0, 255, 255);
+    font-size: 16px;
+    font-family: var(--font-heading);
+    margin-top: auto; /* چسباندن به پایین صفحه */
+    line-height: var(--lineheight);
+}
+/*******************************/
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 40px 20px;
+    background-color: var(--color-primary);
+}
+
+.feature-card {
+    background-color: var(--color-secondary);
+    color: chartreuse;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card h3 {
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+.feature-card p {
+    font-size: 18px;
+    font-family: var(--font-particle);
+    color: var(--color_particle);
+    line-height: var(--lineheight);
+}
+
+/* Hover Effect */
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+}
+
+/*******************************************************/
+/* Documentation Section */
+.documentation {
+    display: flex;
+    flex-direction: column;
+    gap: 30px; /* فاصله بین مقاله‌ها */
+    padding: 40px 20px;
+    background-color:var(--color-primary); /* همان رنگ Feature Grid قبلی */
+}
+
+.documentation article {
+    background-color: var(--color-secondary);
+   
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.documentation article h1 {
+    color: rgba(120, 240, 7, 0.918);
+    font-family: var(--font-family-heading);
+    margin-bottom: 10px;
+    font-size: 30px;
+}
+.documentation article h3{
+    color: rgba(221, 7, 240, 0.918);
+    font-family: var(--font-family-heading);
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+.documentation article p {
+    color: var(--color_particle);
+    font-size: 18px;
+    font-family: var(--font-particle);
+    line-height: var(--lineheight);
+}
+/******************************************/
+.gallery-container {
+    display: flex; /* Flexbox */
+    flex-wrap: wrap; /* کارت‌ها در صورت کمبود فضا به خط بعدی می‌روند */
+    justify-content: center;
+    gap: 20px;
+    padding: 40px 20px;
+    flex-grow: 1; /* فضای باقیمانده بین Hero و Footer */
+}
+
+/* هر کارت گالری */
+.gallery-card {
+    background-color: var(--color-primary);
+    color: chartreuse;
+    border-radius: 15px;
+    overflow: hidden;
+    width: 250px; /* عرض کارت */
+    text-align: center;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    cursor: pointer;
+}
+.gallery-card h3 {
+    color: cyan;
+}
+.gallery-card p {
+    color: beige;
+    line-height: var(--lineheight);
+}
+.gallery-card img {
+    width: 100%;
+    display: block;
+}
+
+.gallery-card p {
+    padding: 10px;
+    font-size: 16px;
+    color: var(--color_particle);
+
+}
+
+/* Hover Effect */
+.gallery-card:hover {
+    transform: scale(1.05); /* بزرگ شدن */
+    opacity: 0.7; /* کمی محو شدن */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .game-name, .slogan, .download {
+        font-size: 15px;
+        text-align: center;
+    }
+
+    .sub-menu {
+        flex-direction: column;
+        gap: 10px;
+        font-size: 16px;
+        align-items: center;
+
+    }
+
+    .gallery-container, .feature-grid {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px 10px;
+        align-items: center;
+
+    }
+
+    .gallery-card, .feature-card {
+        width: 90%;
+        align-items: center;
+    }
+
+    .documentation {
+        padding: 20px 10px;
+        align-items: center;
+
+    }
+
+    .documentation article h3 {
+        font-size: 18px;
+    }
+
+    .documentation article p {
+        font-size: 16px;
+    }
+}
+@media (max-width: 1024px) {
+    .hero {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .game-name {
+        font-size: 44px;
+    }
+
+    .slogan {
+        font-size: 32px;
+    }
+
+    .download {
+        font-size: 32px;
+        padding: 12px 18px;
+    }
+
+    .gallery-card, .feature-card {
+        width: 220px;
+    }
+}
