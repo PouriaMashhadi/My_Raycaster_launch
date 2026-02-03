@@ -20,18 +20,18 @@ body {
     min-height: 100vh;
 }
 .main-container {
+    width: 100%;
     display: flex;
     flex-direction: column;
     min-height: 100vh; /* کل صفحه */
     background-color:var(--color-primary); 
 }
-/* محتوای اصلی */
+/* main*/
 main {
     flex: 1; /*filling the content between header and footer*/
 }
 .hero, .feature-grid {
     margin: 0;
-    padding: 0 20px; /* فقط padding داخلی لازم */
 }
 .feature-grid {
     padding-top: 40px;
@@ -41,37 +41,33 @@ main {
     width: 100%;
     background-color:var(--color-secondary); /* رنگ نوار */
     display: flex;
-    padding: 10px;
     gap: 5px;
   font-family: var( --font-heading);
 }
 
-/* کارت‌ها */
 .card {
  background-color: transparent;
     padding: 15px;
     flex: 1;
     display: flex;
-    align-items: center;      /* وسط‌چین عمودی */
-    justify-content: center;  /* وسط‌چین افقی */
+    align-items: center;   
+    justify-content: center;  
     border-radius: 8px;
 }
 
-/* اسم بازی */
+
 .game-name {
     font-size: 50px;
     font-weight: bold;
     color: chartreuse;
 }
 
-/* شعار */
 .slogan {
     font-size: 40px;
     color: rgb(0, 255, 255);
     
 }
 
-/* دکمه دانلود */
 .download{
     text-decoration: none;
     padding: 15px 20px;
@@ -91,7 +87,7 @@ main {
 button:hover {
     background-color: aqua;
     color: red;
-    transform: translateY(-2px);/*بالا اومدن یا پایین رفتن*/
+    transform: translateY(-2px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
 }
 .sub-menu {
@@ -109,12 +105,12 @@ button:hover {
 /* Footer */
 footer {
     text-align: center;
-    padding: 15px 0;
     background-color: var(--color-secondary) ;
+    width: 100%;
     color: rgb(0, 255, 255);
     font-size: 16px;
     font-family: var(--font-heading);
-    margin-top: auto; /* چسباندن به پایین صفحه */
+    margin-top: auto; 
     line-height: var(--lineheight);
 }
 /*******************************/
@@ -160,9 +156,9 @@ footer {
 .documentation {
     display: flex;
     flex-direction: column;
-    gap: 30px; /* فاصله بین مقاله‌ها */
+    gap: 30px; 
     padding: 40px 20px;
-    background-color:var(--color-primary); /* همان رنگ Feature Grid قبلی */
+    background-color:var(--color-primary);
 }
 
 .documentation article {
@@ -194,20 +190,19 @@ footer {
 /******************************************/
 .gallery-container {
     display: flex; /* Flexbox */
-    flex-wrap: wrap; /* کارت‌ها در صورت کمبود فضا به خط بعدی می‌روند */
+    flex-wrap: wrap; 
     justify-content: center;
     gap: 20px;
     padding: 40px 20px;
-    flex-grow: 1; /* فضای باقیمانده بین Hero و Footer */
+    flex-grow: 1; /* Hero و Footer */
 }
 
-/* هر کارت گالری */
 .gallery-card {
     background-color: var(--color-primary);
     color: chartreuse;
     border-radius: 15px;
     overflow: hidden;
-    width: 250px; /* عرض کارت */
+    width: 250px;
     text-align: center;
     transition: transform 0.3s ease, opacity 0.3s ease;
     cursor: pointer;
@@ -231,10 +226,9 @@ footer {
 
 }
 
-/* Hover Effect */
 .gallery-card:hover {
-    transform: scale(1.05); /* بزرگ شدن */
-    opacity: 0.7; /* کمی محو شدن */
+    transform: scale(1.05); 
+    opacity: 0.7;
     box-shadow: 0 8px 20px rgba(0,0,0,0.4);
 }
 @media (max-width: 768px) {
@@ -260,6 +254,7 @@ footer {
     .gallery-container, .feature-grid {
         flex-direction: column;
         gap: 15px;
+            width: 100%;
         padding: 20px 10px;
         align-items: center;
 
